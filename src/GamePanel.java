@@ -10,8 +10,8 @@ public class GamePanel extends JPanel implements ActionListener {
     boolean running = true;
     boolean gridMode = true;//if you want to have grid like separated square
     Color GridColor = new Color(0x797979);
-    int UNIT_SIZE = 30;
-    final int HEADER_HEIGHT = 50;
+    int UNIT_SIZE = 50;
+    final int HEADER_HEIGHT = 80;
     Timer timer;
 
 
@@ -61,6 +61,9 @@ public class GamePanel extends JPanel implements ActionListener {
                 g.drawLine(i * UNIT_SIZE, HEADER_HEIGHT, i * UNIT_SIZE, PANEL_HEIGHT);
             }
         }
+        g.setFont(new Font("Bernard MT Condensed",Font.BOLD,60));
+        g.setColor(new Color(0xFFFFFF));
+        g.drawString("SNAKE", PANEL_WIDTH / 2 - 75 ,60);//change x of it base on size created by formula
     }
 
     @Override

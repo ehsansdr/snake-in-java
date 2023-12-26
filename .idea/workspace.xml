@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b49dd498-1f13-49b9-82ab-d87af5bafa87" name="Changes" comment="snake move done">
+    <list default="true" id="b49dd498-1f13-49b9-82ab-d87af5bafa87" name="Changes" comment="key Listening fixed">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GamePanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -142,7 +143,43 @@
       <option name="presentableId" value="LOCAL‎۰۰۰۱۲" />
       <updated>1703579551902</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL‎۰۰۰۱۳" summary="snake move and body fixed">
+      <created>1703579749341</created>
+      <option name="number" value="LOCAL‎۰۰۰۱۳" />
+      <option name="presentableId" value="LOCAL‎۰۰۰۱۳" />
+      <updated>1703579749341</updated>
+    </task>
+    <task id="LOCAL‎۰۰۰۱۴" summary="before snake draw method">
+      <created>1703587990691</created>
+      <option name="number" value="LOCAL‎۰۰۰۱۴" />
+      <option name="presentableId" value="LOCAL‎۰۰۰۱۴" />
+      <updated>1703587990691</updated>
+    </task>
+    <task id="LOCAL‎۰۰۰۱۵" summary="eyes of snake fixed">
+      <created>1703590634610</created>
+      <option name="number" value="LOCAL‎۰۰۰۱۵" />
+      <option name="presentableId" value="LOCAL‎۰۰۰۱۵" />
+      <updated>1703590634610</updated>
+    </task>
+    <task id="LOCAL‎۰۰۰۱۶" summary="thong of snake fixed">
+      <created>1703591849374</created>
+      <option name="number" value="LOCAL‎۰۰۰۱۶" />
+      <option name="presentableId" value="LOCAL‎۰۰۰۱۶" />
+      <updated>1703591849374</updated>
+    </task>
+    <task id="LOCAL‎۰۰۰۱۷" summary="apple eating fixed">
+      <created>1703592934783</created>
+      <option name="number" value="LOCAL‎۰۰۰۱۷" />
+      <option name="presentableId" value="LOCAL‎۰۰۰۱۷" />
+      <updated>1703592934783</updated>
+    </task>
+    <task id="LOCAL‎۰۰۰۱۸" summary="key Listening fixed">
+      <created>1703593779895</created>
+      <option name="number" value="LOCAL‎۰۰۰۱۸" />
+      <option name="presentableId" value="LOCAL‎۰۰۰۱۸" />
+      <updated>1703593779895</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -156,7 +193,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/master" />
+                        <option value="master" />
                       </list>
                     </value>
                   </entry>
@@ -200,6 +237,13 @@
     <MESSAGE value="action performed connected again" />
     <MESSAGE value="snake field done" />
     <MESSAGE value="snake move done" />
-    <option name="LAST_COMMIT_MESSAGE" value="snake move done" />
+    <MESSAGE value="snake move and body fixed" />
+    <MESSAGE value="before snake draw method" />
+    <MESSAGE value="eyes of snake fixd" />
+    <MESSAGE value="eyes of snake fixed" />
+    <MESSAGE value="thong of snake fixed" />
+    <MESSAGE value="apple eating fixed" />
+    <MESSAGE value="key Listening fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="key Listening fixed" />
   </component>
 </project>

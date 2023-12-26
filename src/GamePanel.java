@@ -16,7 +16,7 @@ public class GamePanel extends JPanel implements ActionListener {
     final int HEADER_HEIGHT = 80;
     Random random ;
     Timer timer;
-    int delay = 500;
+    int delay = 200;
     public static char direction = 'R';//'R' right ,'L' left ,'U' Up ,'D' down
 
     //************************* PANEL ************************
@@ -104,18 +104,35 @@ public class GamePanel extends JPanel implements ActionListener {
 
     }
     public void newApple() {
-        XApple = random.nextInt(FIELD_WIDTH) / UNIT_SIZE;
-        YApple = random.nextInt(FIELD_HEIGHT) / UNIT_SIZE ;//mathematical calculation
-        System.out.println("X square of apple" + XApple);
-        System.out.println("Y square of apple" + YApple);
+        //this while loop is here because we don't want to have apple spawn under the snake ,but it sucks
+        boolean isAppleInAppropriatePlace = false;
+        while (!isAppleInAppropriatePlace){
+            XApple = random.nextInt(FIELD_WIDTH) / UNIT_SIZE;//the output number is base on squares not pixel
+            YApple = random.nextInt(FIELD_HEIGHT) / UNIT_SIZE;//mathematical calculation
 
-        //now we get the UNIT of square we should have spatial pixel coordinates
-        XApple *= UNIT_SIZE;
-        YApple *= UNIT_SIZE;
-        YApple += HEADER_HEIGHT;///////////////////////
+            // now we get the UNIT of square we should have spatial pixel coordinates
+            XApple *= UNIT_SIZE;
+            YApple *= UNIT_SIZE;
+            YApple += HEADER_HEIGHT;///////////////////////
+            for (int i = 0 ; i < bodyParts ; i++){
+                if (XApple == xBodyPart[i] && YApple == yBodyPart[i]){
+                    isAppleInAppropriatePlace = false;//it is default false but because of
+                    //this sout show us status and history of game manipulating and if checking
+                    System.out.println("\n\n["+ i +"] : FOUNDED!! :");
+                    break;
 
-        System.out.println("X pixel of apple" + XApple);
-        System.out.println("Y pixel of apple" + YApple);
+                }
+                else{
+                    isAppleInAppropriatePlace = true;
+                    //this sout show us status and history of game manipulating and if checking
+                    System.out.println("\n["+ i +"] : NO coincidence between apple and body found!!!");
+                }
+            }
+        }
+        System.out.println("X square of apple : " + XApple);
+        System.out.println("Y square of apple : " + YApple);
+        System.out.println("X pixel of apple  : " + XApple);
+        System.out.println("Y pixel of apple  : " + YApple + "\n");
         System.out.println("newApple execute applesEaten : " + appleEaten);
 
     }
@@ -265,7 +282,6 @@ public class GamePanel extends JPanel implements ActionListener {
             move();
             repaint();
             /*********************************/
-            System.out.println("now actionPerformed running");
         }
     }
 }

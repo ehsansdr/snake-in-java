@@ -4,6 +4,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLOutput;
+import java.util.Random;
+
 @Data
 public class GamePanel extends JPanel implements ActionListener {
     //********************** DEFAULT INFO ********************
@@ -12,6 +15,7 @@ public class GamePanel extends JPanel implements ActionListener {
     Color GridColor = new Color(0x797979);
     int UNIT_SIZE = 50;
     final int HEADER_HEIGHT = 80;
+    Random random ;
     Timer timer;
 
 
@@ -48,6 +52,29 @@ public class GamePanel extends JPanel implements ActionListener {
         this.setVisible(true);
         this.addKeyListener(new MoveSnake());//we add the move and keyListeners in panel not frame
         System.out.println("GamePanel : done!!!");
+
+
+        startGame();
+    }
+    public void startGame(){
+        newApple();
+        System.out.println("startGame method!!!");
+    }
+    public void newApple() {
+        random = new Random();
+        XApple = random.nextInt(FIELD_WIDTH) / UNIT_SIZE;
+        YApple = random.nextInt(FIELD_HEIGHT) / UNIT_SIZE ;//mathematical calculation
+        System.out.println(XApple);
+        System.out.println(YApple);
+
+        //now we get the UNIT of square we should have spatial pixel coordinates
+        XApple *= UNIT_SIZE;
+        YApple *= UNIT_SIZE;
+        YApple += HEADER_HEIGHT;
+
+        System.out.println(XApple);
+        System.out.println(YApple);
+        System.out.println("newApple execute applesEaten : " + appleEaten);
     }
 
     @Override//if you don't add this program take it as self-made method not override method
@@ -73,6 +100,8 @@ public class GamePanel extends JPanel implements ActionListener {
          g.setFont(new Font(headerFontOfSnakeName.getName(), Font.PLAIN, 30));//we use getName() because of independence
          g.setColor(new Color(0xFFFFFF));
          g.drawString("apples : " + appleEaten, 10, 50);
+
+
 
      }
 

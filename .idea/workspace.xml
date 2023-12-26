@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b49dd498-1f13-49b9-82ab-d87af5bafa87" name="Changes" comment="&quot;SNAKE&quot; name created">
+    <list default="true" id="b49dd498-1f13-49b9-82ab-d87af5bafa87" name="Changes" comment="&quot;Apples :&quot; created">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/snakeUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/snakeUI.form" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +100,13 @@
       <option name="presentableId" value="LOCAL‎۰۰۰۰۵" />
       <updated>1703515105185</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL‎۰۰۰۰۶" summary="&quot;Apples :&quot; created">
+      <created>1703571436748</created>
+      <option name="number" value="LOCAL‎۰۰۰۰۶" />
+      <option name="presentableId" value="LOCAL‎۰۰۰۰۶" />
+      <updated>1703571436748</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -132,6 +137,7 @@
     <MESSAGE value="GameFrame created" />
     <MESSAGE value="grid created" />
     <MESSAGE value="&quot;SNAKE&quot; name created" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;SNAKE&quot; name created" />
+    <MESSAGE value="&quot;Apples :&quot; created" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Apples :&quot; created" />
   </component>
 </project>

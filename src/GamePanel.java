@@ -18,7 +18,7 @@ public class GamePanel extends JPanel implements ActionListener {
     //************************* PANEL ************************
     final int PANEL_WIDTH = 600 + 1;
     final int PANEL_HEIGHT = 600 + HEADER_HEIGHT + 1;//+1  is because of difference  of line of grid
-    Color panelColor = new Color(0x161259);
+    Color panelColor = new Color(0x0F4617);
 
 
     //************************* FIELD ************************
@@ -37,6 +37,9 @@ public class GamePanel extends JPanel implements ActionListener {
 
     // ********************** DEFAULT INFO ********************
     int GAME_UNIT =  (FIELD_WIDTH * FIELD_HEIGHT) / UNIT_SIZE;
+    Font headerFontOfSnakeName = new Font("Berlin Sans FB Demi", Font.PLAIN, 60);
+
+
 
     GamePanel(){
         this.setPreferredSize(new Dimension(PANEL_WIDTH,PANEL_HEIGHT));
@@ -47,10 +50,10 @@ public class GamePanel extends JPanel implements ActionListener {
         System.out.println("GamePanel : done!!!");
     }
 
-    @Override
+    @Override//if you don't add this program take it as self-made method not override method
     public void paint(Graphics g) {
         super.paint(g);
-        if(gridMode) {
+        if (gridMode) {
             for (int i = 0; i <= FIELD_WIDTH / UNIT_SIZE; i++) {
                 //for horizontal
                 g.setColor(GridColor);
@@ -58,13 +61,20 @@ public class GamePanel extends JPanel implements ActionListener {
 
                 //for vertical
                 g.setColor(GridColor);
-                g.drawLine(i * UNIT_SIZE, HEADER_HEIGHT, i * UNIT_SIZE, PANEL_HEIGHT);
+                g.drawLine(i * UNIT_SIZE, HEADER_HEIGHT, i * UNIT_SIZE, FIELD_HEIGHT + HEADER_HEIGHT);
             }
+            g.setFont(headerFontOfSnakeName);
+            g.setColor(new Color(0xFFFFFF));
+            g.drawString("SNAKE", PANEL_WIDTH / 2 - 75, 60);//change x of it base on size created by formula
         }
-        g.setFont(new Font("Bernard MT Condensed",Font.BOLD,60));
-        g.setColor(new Color(0xFFFFFF));
-        g.drawString("SNAKE", PANEL_WIDTH / 2 - 75 ,60);//change x of it base on size created by formula
+        drawInfo(g);
     }
+     public void drawInfo(Graphics g){
+         g.setFont(new Font(headerFontOfSnakeName.getName(), Font.PLAIN, 30));//we use getName() because of independence
+         g.setColor(new Color(0xFFFFFF));
+         g.drawString("apples : " + appleEaten, 10, 50);
+
+     }
 
     @Override
     public void actionPerformed(ActionEvent e) {

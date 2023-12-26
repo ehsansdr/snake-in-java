@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b49dd498-1f13-49b9-82ab-d87af5bafa87" name="Changes" comment="&quot;Apples :&quot; created">
+    <list default="true" id="b49dd498-1f13-49b9-82ab-d87af5bafa87" name="Changes" comment="newApple coordinates done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GamePanel.java" afterDir="false" />
     </list>
@@ -24,6 +24,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="SOFT" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -106,7 +107,25 @@
       <option name="presentableId" value="LOCAL‎۰۰۰۰۶" />
       <updated>1703571436748</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL‎۰۰۰۰۷" summary="apple coordinate done">
+      <created>1703572440440</created>
+      <option name="number" value="LOCAL‎۰۰۰۰۷" />
+      <option name="presentableId" value="LOCAL‎۰۰۰۰۷" />
+      <updated>1703572440440</updated>
+    </task>
+    <task id="LOCAL‎۰۰۰۰۸" summary="apple coordinates done">
+      <created>1703573229822</created>
+      <option name="number" value="LOCAL‎۰۰۰۰۸" />
+      <option name="presentableId" value="LOCAL‎۰۰۰۰۸" />
+      <updated>1703573229822</updated>
+    </task>
+    <task id="LOCAL‎۰۰۰۰۹" summary="newApple coordinates done">
+      <created>1703573301495</created>
+      <option name="number" value="LOCAL‎۰۰۰۰۹" />
+      <option name="presentableId" value="LOCAL‎۰۰۰۰۹" />
+      <updated>1703573301495</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -138,6 +157,9 @@
     <MESSAGE value="grid created" />
     <MESSAGE value="&quot;SNAKE&quot; name created" />
     <MESSAGE value="&quot;Apples :&quot; created" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Apples :&quot; created" />
+    <MESSAGE value="apple coordinate done" />
+    <MESSAGE value="apple coordinates done" />
+    <MESSAGE value="newApple coordinates done" />
+    <option name="LAST_COMMIT_MESSAGE" value="newApple coordinates done" />
   </component>
 </project>

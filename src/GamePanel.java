@@ -35,12 +35,13 @@ public class GamePanel extends JPanel implements ActionListener {
     public int bodyParts = 3;
     public int xBodyPart [] = new int[FIELD_WIDTH * FIELD_HEIGHT / UNIT_SIZE];//you can actually use GAME_UNIT but..
     public int yBodyPart [] = new int[FIELD_WIDTH * FIELD_HEIGHT / UNIT_SIZE];
-    int eyeSize = UNIT_SIZE / 6;
     Color headColorOfSnake = new Color(0x386641);
-    Color eyesColorOfSnake = new Color(0xdad7cd);
-    Color thongColorOfSnake = new Color(0xccd5ae);
-
     Color bodyColorOfSnake = new Color(0xa7c957);
+    int eyeSize = UNIT_SIZE / 7;
+    Color eyesColorOfSnake = new Color(0xdad7cd);
+    int thongWidth =  UNIT_SIZE / 4;
+    int thongHeight =  thongWidth / 2 ;
+    Color thongColorOfSnake = new Color(0xD4A373);
 
     //************************* APPLE ************************
     int appleEaten = 0;
@@ -160,6 +161,12 @@ public class GamePanel extends JPanel implements ActionListener {
                          g.setColor(eyesColorOfSnake);
                          g.fillOval(xBodyPart[i] + (UNIT_SIZE / 3 ) * 2  ,
                                  yBodyPart[i] + ((UNIT_SIZE / 3 ) * 2) ,eyeSize ,eyeSize );
+                         //thong
+                         g.setColor(thongColorOfSnake);
+                         g.fillRect(xBodyPart[i] + UNIT_SIZE,
+                                 yBodyPart[i] + ((UNIT_SIZE / 2) - (thongHeight / 2)),
+                                 thongWidth ,thongHeight );
+
                          break;
 
 
@@ -172,6 +179,11 @@ public class GamePanel extends JPanel implements ActionListener {
                          g.setColor(eyesColorOfSnake);
                          g.fillOval(xBodyPart[i] + (UNIT_SIZE / 3 ) * 1 - eyeSize,
                                  yBodyPart[i] + (UNIT_SIZE / 3 ) * 2 ,eyeSize ,eyeSize );
+                         //thong
+                         g.setColor(thongColorOfSnake);
+                         g.fillRect(xBodyPart[i] - thongWidth,
+                                 yBodyPart[i] + ((UNIT_SIZE / 2) - (thongHeight / 2)),
+                                 thongWidth ,thongHeight );
                          break;
 
 
@@ -184,6 +196,11 @@ public class GamePanel extends JPanel implements ActionListener {
                          g.setColor(eyesColorOfSnake);
                          g.fillOval(xBodyPart[i] + (UNIT_SIZE / 3 ) * 2  ,
                                  yBodyPart[i] + (UNIT_SIZE / 3 ) * 1 - eyeSize ,eyeSize ,eyeSize );
+                         //thong
+                         g.setColor(thongColorOfSnake);
+                         g.fillRect(xBodyPart[i] + ((UNIT_SIZE / 2) - (thongHeight / 2)),
+                                 yBodyPart[i] - thongWidth,
+                                 thongHeight , thongWidth  );
                          break;
 
                      case 'D' :
@@ -195,6 +212,11 @@ public class GamePanel extends JPanel implements ActionListener {
                          g.setColor(eyesColorOfSnake);
                          g.fillOval(xBodyPart[i] + (UNIT_SIZE / 3 ) * 2  ,
                                  yBodyPart[i] + (UNIT_SIZE / 3 ) * 2 ,eyeSize ,eyeSize );
+                         //thong
+                         g.setColor(thongColorOfSnake);
+                         g.fillRect(xBodyPart[i] + ((UNIT_SIZE / 2) - (thongHeight / 2)),
+                                 yBodyPart[i] + ((UNIT_SIZE )),
+                                 thongHeight,thongWidth  );
                          break;
                  }
              }//the rest the body

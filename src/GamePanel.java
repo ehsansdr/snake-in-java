@@ -1,11 +1,9 @@
 import lombok.Data;
-import lombok.SneakyThrows;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.SQLOutput;
 import java.util.Random;
 
 @Data
@@ -14,7 +12,7 @@ public class GamePanel extends JPanel implements ActionListener {
     boolean running = true;
     boolean gridMode = true;//if you want to have grid like separated square
     Color GridColor = new Color(0x797979);
-    int UNIT_SIZE = 50;
+    public int UNIT_SIZE = 50;
     final int HEADER_HEIGHT = 80;
     Random random ;
     Timer timer;
@@ -34,6 +32,11 @@ public class GamePanel extends JPanel implements ActionListener {
     final int FIELD_HEIGHT = PANEL_HEIGHT - HEADER_HEIGHT;
 
     //********************** SNAKE BODY **********************
+    public int bodyParts = 3;
+    public int xBodyPart [] = new int[FIELD_WIDTH * FIELD_HEIGHT / UNIT_SIZE];//you can actually use GAME_UNIT but..
+    public int yBodyPart [] = new int[FIELD_WIDTH * FIELD_HEIGHT / UNIT_SIZE];
+    Color headColorOfSnake = new Color(0x386641);
+    Color bodyColorOfSnake = new Color(0xa7c957);
 
     //************************* APPLE ************************
     int appleEaten = 0;
@@ -61,10 +64,16 @@ public class GamePanel extends JPanel implements ActionListener {
         startGame();
     }
     public void startGame(){
+
         timer =new Timer(delay,this);
         timer.start();
+
         newApple();
         System.out.println("startGame method!!!");
+    }
+
+    public void move(){
+
     }
     public void newApple() {
         XApple = random.nextInt(FIELD_WIDTH) / UNIT_SIZE;
@@ -100,9 +109,9 @@ public class GamePanel extends JPanel implements ActionListener {
             g.setColor(new Color(0xFFFFFF));
             g.drawString("SNAKE", PANEL_WIDTH / 2 - 75, 60);//change x of it base on size created by formula
         }
-        drawInfo(g);
+        drawObject(g);
     }
-     public void drawInfo(Graphics g){
+     public void drawObject(Graphics g){
          g.setFont(new Font(headerFontOfSnakeName.getName(), Font.PLAIN, 30));//we use getName() because of independence
          g.setColor(new Color(0xFFFFFF));
          g.drawString("apples : " + appleEaten, 10, 50);

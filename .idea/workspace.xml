@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b49dd498-1f13-49b9-82ab-d87af5bafa87" name="Changes" comment="newApple coordinates done">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="b49dd498-1f13-49b9-82ab-d87af5bafa87" name="Changes" comment="action performed connected again">
       <change beforePath="$PROJECT_DIR$/src/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GamePanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -125,7 +124,13 @@
       <option name="presentableId" value="LOCAL‎۰۰۰۰۹" />
       <updated>1703573301495</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL‎۰۰۰۱۰" summary="action performed connected again">
+      <created>1703576614983</created>
+      <option name="number" value="LOCAL‎۰۰۰۱۰" />
+      <option name="presentableId" value="LOCAL‎۰۰۰۱۰" />
+      <updated>1703576614983</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -139,13 +144,33 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="origin/master" />
                       </list>
                     </value>
                   </entry>
                 </map>
               </option>
             </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/master" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+            </list>
           </value>
         </entry>
       </map>
@@ -160,6 +185,7 @@
     <MESSAGE value="apple coordinate done" />
     <MESSAGE value="apple coordinates done" />
     <MESSAGE value="newApple coordinates done" />
-    <option name="LAST_COMMIT_MESSAGE" value="newApple coordinates done" />
+    <MESSAGE value="action performed connected again" />
+    <option name="LAST_COMMIT_MESSAGE" value="action performed connected again" />
   </component>
 </project>

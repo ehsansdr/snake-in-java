@@ -1,3 +1,5 @@
+import com.sun.prism.Graphics;
+
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
@@ -9,15 +11,19 @@ public class MoveSnake extends KeyAdapter {
         switch (e.getKeyChar()){
             case 'd' :
                 System.out.println("you are pressing d");
+                GamePanel.direction = 'R';
                 break;
             case 's' :
                 System.out.println("you are pressing s");
+                GamePanel.direction = 'D';
                 break;
              case 'a' :
                 System.out.println("you are pressing a");
+                 GamePanel.direction = 'L';
                 break;
             case 'w' :
                 System.out.println("you are pressing w");
+                GamePanel.direction = 'U';
                 break;
         }
 

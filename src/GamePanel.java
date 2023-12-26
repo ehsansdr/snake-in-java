@@ -16,8 +16,8 @@ public class GamePanel extends JPanel implements ActionListener {
     final int HEADER_HEIGHT = 80;
     Random random ;
     Timer timer;
-    int delay = 2000;
-
+    int delay = 500;
+    public static char direction = 'R';//'R' right ,'L' left ,'U' Up ,'D' down
 
     //************************* PANEL ************************
     final int PANEL_WIDTH = 600 + 1;
@@ -61,9 +61,16 @@ public class GamePanel extends JPanel implements ActionListener {
         System.out.println("GamePanel : done!!!");
 
 
+
+
         startGame();
     }
     public void startGame(){
+        bodyParts = 3;
+        for (int i = 0 ; i <= bodyParts ; i++){
+            xBodyPart[i] = UNIT_SIZE * (5 - i);
+            yBodyPart[i] = UNIT_SIZE * 2 + HEADER_HEIGHT;
+        }
 
         timer =new Timer(delay,this);
         timer.start();
@@ -73,6 +80,22 @@ public class GamePanel extends JPanel implements ActionListener {
     }
 
     public void move(){
+        for (int i = bodyParts ;i > 0 ; i--){
+            xBodyPart[i] = xBodyPart[i - 1];
+            yBodyPart[i] = yBodyPart[i - 1];
+        }
+
+        switch(direction){
+            case 'R' :xBodyPart[0] += UNIT_SIZE;
+                break;
+            case 'L' :xBodyPart[0] -= UNIT_SIZE;
+                break;
+            case 'U' :yBodyPart[0] -= UNIT_SIZE;
+                break;
+            case 'D' :yBodyPart[0] += UNIT_SIZE;
+                break;
+
+        }
 
     }
     public void newApple() {
@@ -95,6 +118,8 @@ public class GamePanel extends JPanel implements ActionListener {
     @Override//if you don't add this program take it as self-made method not override method
     public void paint(Graphics g) {
         super.paint(g);
+
+        //grid creation
         if (gridMode) {
             for (int i = 0; i <= FIELD_WIDTH / UNIT_SIZE; i++) {
                 //for horizontal
@@ -108,6 +133,17 @@ public class GamePanel extends JPanel implements ActionListener {
             g.setFont(headerFontOfSnakeName);
             g.setColor(new Color(0xFFFFFF));
             g.drawString("SNAKE", PANEL_WIDTH / 2 - 75, 60);//change x of it base on size created by formula
+        }
+
+        //snake creating
+        for (int i = 0 ;i <= bodyParts ; i++){
+            if (i == 0){
+                g.setColor(headColorOfSnake);
+                g.fillRect(xBodyPart[i] +1 ,yBodyPart[i] + 1,UNIT_SIZE - 1,UNIT_SIZE - 1);
+            }else {
+                g.setColor(bodyColorOfSnake);
+                g.fillRect(xBodyPart[i] +1 ,yBodyPart[i] + 1,UNIT_SIZE - 1,UNIT_SIZE - 1);
+            }
         }
         drawObject(g);
     }
@@ -137,7 +173,7 @@ public class GamePanel extends JPanel implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if(running){
-            startGame();
+            move();
             repaint();
             System.out.println("now actionPerformed running");
         }

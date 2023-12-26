@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b49dd498-1f13-49b9-82ab-d87af5bafa87" name="Changes" comment="action performed connected again">
+    <list default="true" id="b49dd498-1f13-49b9-82ab-d87af5bafa87" name="Changes" comment="snake field done">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MoveSnake.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MoveSnake.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +132,13 @@
       <option name="presentableId" value="LOCAL‎۰۰۰۱۰" />
       <updated>1703576614983</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL‎۰۰۰۱۱" summary="snake field done">
+      <created>1703577223802</created>
+      <option name="number" value="LOCAL‎۰۰۰۱۱" />
+      <option name="presentableId" value="LOCAL‎۰۰۰۱۱" />
+      <updated>1703577223802</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -186,6 +194,7 @@
     <MESSAGE value="apple coordinates done" />
     <MESSAGE value="newApple coordinates done" />
     <MESSAGE value="action performed connected again" />
-    <option name="LAST_COMMIT_MESSAGE" value="action performed connected again" />
+    <MESSAGE value="snake field done" />
+    <option name="LAST_COMMIT_MESSAGE" value="snake field done" />
   </component>
 </project>

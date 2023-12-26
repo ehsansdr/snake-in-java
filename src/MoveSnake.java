@@ -10,35 +10,55 @@ public class MoveSnake extends KeyAdapter {
 
         switch (e.getKeyChar()){
             case 'd' :
-                System.out.println("you are pressing d");
-                GamePanel.direction = 'R';
+                if (GamePanel.direction != 'L'){
+                    System.out.println("you are pressing d");
+                    GamePanel.direction = 'R';
+                }
                 break;
-            case 's' :
-                System.out.println("you are pressing s");
-                GamePanel.direction = 'D';
-                break;
-             case 'a' :
-                System.out.println("you are pressing a");
-                 GamePanel.direction = 'L';
+            case 'a' :
+                if (GamePanel.direction != 'R'){
+                    System.out.println("you are pressing a");
+                    GamePanel.direction = 'L';
+                    }
                 break;
             case 'w' :
-                System.out.println("you are pressing w");
-                GamePanel.direction = 'U';
+                if (GamePanel.direction != 'D'){
+                    System.out.println("you are pressing w");
+                    GamePanel.direction = 'U';
+                }
+                break;
+            case 's' :
+                if (GamePanel.direction != 'U'){
+                    System.out.println("you are pressing s");
+                    GamePanel.direction = 'D';
+                }
                 break;
         }
 
-        switch (e.getKeyChar()){
-            case 'e' :
-                System.out.println("you are pressing e");
+        switch (e.getKeyCode()){
+            case KeyEvent.VK_RIGHT :
+                if (GamePanel.direction != 'L'){
+                    System.out.println("you are pressing right arrow");
+                    GamePanel.direction = 'R';
+                }
                 break;
-            case 'r' :
-                System.out.println("you are pressing r");
+            case KeyEvent.VK_LEFT :
+                if (GamePanel.direction != 'R'){
+                    System.out.println("you are pressing left arrow");
+                    GamePanel.direction = 'L';
+                }
                 break;
-             case 't' :
-                System.out.println("you are pressing t");
+            case KeyEvent.VK_UP :
+                if (GamePanel.direction != 'D'){
+                    System.out.println("you are pressing up arrow");
+                    GamePanel.direction = 'U';
+                }
                 break;
-            case 'y' :
-                System.out.println("you are pressing y");
+            case KeyEvent.VK_DOWN :
+                if (GamePanel.direction != 'U'){
+                    System.out.println("you are pressing y");
+                    GamePanel.direction = 'D';
+                }
                 break;
         }
     }

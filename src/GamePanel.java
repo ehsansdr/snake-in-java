@@ -147,6 +147,18 @@ public class GamePanel extends JPanel implements ActionListener {
         }
         drawObject(g);
     }
+     public void drawSnake(Graphics g){
+         //snake creating
+         for (int i = 0 ;i <= bodyParts ; i++){
+             if (i == 0){//if we are drawing head
+                 g.setColor(headColorOfSnake);
+                 g.fillRect(xBodyPart[i]  ,yBodyPart[i] ,UNIT_SIZE ,UNIT_SIZE );
+             }else {
+                 g.setColor(bodyColorOfSnake);
+                 g.fillRect(xBodyPart[i]  ,yBodyPart[i] ,UNIT_SIZE ,UNIT_SIZE );
+             }
+         }
+     }
      public void drawObject(Graphics g){
          g.setFont(new Font(headerFontOfSnakeName.getName(), Font.PLAIN, 30));//we use getName() because of independence
          g.setColor(new Color(0xFFFFFF));

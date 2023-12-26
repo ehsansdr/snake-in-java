@@ -16,7 +16,7 @@ public class GamePanel extends JPanel implements ActionListener {
     final int HEADER_HEIGHT = 80;
     Random random ;
     Timer timer;
-    int delay = 2000;
+    int delay = 500;
     public static char direction = 'R';//'R' right ,'L' left ,'U' Up ,'D' down
 
     //************************* PANEL ************************
@@ -118,6 +118,13 @@ public class GamePanel extends JPanel implements ActionListener {
         System.out.println("Y pixel of apple" + YApple);
         System.out.println("newApple execute applesEaten : " + appleEaten);
 
+    }
+    public void eatApple(){
+        if(xBodyPart[0] == XApple && yBodyPart[0] == YApple){
+            appleEaten++;
+            bodyParts++;
+            newApple();
+        }
     }
 
     @Override//if you don't add this program take it as self-made method not override method
@@ -227,6 +234,7 @@ public class GamePanel extends JPanel implements ActionListener {
          }
      }
      public void drawObject(Graphics g){
+        //apple eaten info:
          g.setFont(new Font(headerFontOfSnakeName.getName(), Font.PLAIN, 30));//we use getName() because of independence
          g.setColor(new Color(0xFFFFFF));
          g.drawString("apples : " + appleEaten, 10, 50);
@@ -252,10 +260,12 @@ public class GamePanel extends JPanel implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if(running){
+            /** do not change this ordinationb because it would amke graphic bug in top left of frame*/
+            eatApple();
             move();
             repaint();
+            /*********************************/
             System.out.println("now actionPerformed running");
         }
-        repaint();
     }
 }

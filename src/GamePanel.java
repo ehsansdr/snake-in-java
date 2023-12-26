@@ -16,7 +16,7 @@ public class GamePanel extends JPanel implements ActionListener {
     final int HEADER_HEIGHT = 80;
     Random random ;
     Timer timer;
-    int delay = 500;
+    int delay = 2000;
     public static char direction = 'R';//'R' right ,'L' left ,'U' Up ,'D' down
 
     //************************* PANEL ************************
@@ -35,7 +35,11 @@ public class GamePanel extends JPanel implements ActionListener {
     public int bodyParts = 3;
     public int xBodyPart [] = new int[FIELD_WIDTH * FIELD_HEIGHT / UNIT_SIZE];//you can actually use GAME_UNIT but..
     public int yBodyPart [] = new int[FIELD_WIDTH * FIELD_HEIGHT / UNIT_SIZE];
+    int eyeSize = UNIT_SIZE / 6;
     Color headColorOfSnake = new Color(0x386641);
+    Color eyesColorOfSnake = new Color(0xdad7cd);
+    Color thongColorOfSnake = new Color(0xccd5ae);
+
     Color bodyColorOfSnake = new Color(0xa7c957);
 
     //************************* APPLE ************************
@@ -135,25 +139,66 @@ public class GamePanel extends JPanel implements ActionListener {
             g.drawString("SNAKE", PANEL_WIDTH / 2 - 75, 60);//change x of it base on size created by formula
         }
 
-        //snake creating
-        for (int i = 0 ;i <= bodyParts ; i++){
-            if (i == 0){
-                g.setColor(headColorOfSnake);
-                g.fillRect(xBodyPart[i]  ,yBodyPart[i] ,UNIT_SIZE ,UNIT_SIZE );
-            }else {
-                g.setColor(bodyColorOfSnake);
-                g.fillRect(xBodyPart[i]  ,yBodyPart[i] ,UNIT_SIZE ,UNIT_SIZE );
-            }
-        }
         drawObject(g);
+        drawSnake(g);
     }
      public void drawSnake(Graphics g){
          //snake creating
          for (int i = 0 ;i <= bodyParts ; i++){
-             if (i == 0){//if we are drawing head
+             //if we are drawing head
+             if (i == 0){
                  g.setColor(headColorOfSnake);
                  g.fillRect(xBodyPart[i]  ,yBodyPart[i] ,UNIT_SIZE ,UNIT_SIZE );
-             }else {
+                 switch (direction){
+                     //if the snake heading to the Right:
+                     case 'R' :
+                         //upper eye
+                         g.setColor(eyesColorOfSnake);
+                         g.fillOval(xBodyPart[i] + (UNIT_SIZE / 3 ) * 2  ,
+                                 yBodyPart[i]  + (UNIT_SIZE / 3 ) * 1 - (eyeSize/2),eyeSize ,eyeSize );
+                         //down eye
+                         g.setColor(eyesColorOfSnake);
+                         g.fillOval(xBodyPart[i] + (UNIT_SIZE / 3 ) * 2  ,
+                                 yBodyPart[i] + ((UNIT_SIZE / 3 ) * 2) ,eyeSize ,eyeSize );
+                         break;
+
+
+                     case 'L' :
+                         //upper eye
+                         g.setColor(eyesColorOfSnake);
+                         g.fillOval(xBodyPart[i] + (UNIT_SIZE / 3 ) * 1 - eyeSize ,
+                                 yBodyPart[i] + (UNIT_SIZE / 3 ) * 1 - (eyeSize/2),eyeSize ,eyeSize );
+                         //down eye
+                         g.setColor(eyesColorOfSnake);
+                         g.fillOval(xBodyPart[i] + (UNIT_SIZE / 3 ) * 1 - eyeSize,
+                                 yBodyPart[i] + (UNIT_SIZE / 3 ) * 2 ,eyeSize ,eyeSize );
+                         break;
+
+
+                     case 'U' :
+                         //left eye
+                         g.setColor(eyesColorOfSnake);
+                         g.fillOval(xBodyPart[i] + (UNIT_SIZE / 3 ) * 1 - (eyeSize/2)  ,
+                                 yBodyPart[i] + (UNIT_SIZE / 3 ) * 1 - eyeSize,eyeSize ,eyeSize );
+                         //right eye
+                         g.setColor(eyesColorOfSnake);
+                         g.fillOval(xBodyPart[i] + (UNIT_SIZE / 3 ) * 2  ,
+                                 yBodyPart[i] + (UNIT_SIZE / 3 ) * 1 - eyeSize ,eyeSize ,eyeSize );
+                         break;
+
+                     case 'D' :
+                         //left eye
+                         g.setColor(eyesColorOfSnake);
+                         g.fillOval(xBodyPart[i] + (UNIT_SIZE / 3 ) * 1 - (eyeSize/2)   ,
+                                 yBodyPart[i] + (UNIT_SIZE / 3 ) * 2 ,eyeSize ,eyeSize );
+                         //right eye
+                         g.setColor(eyesColorOfSnake);
+                         g.fillOval(xBodyPart[i] + (UNIT_SIZE / 3 ) * 2  ,
+                                 yBodyPart[i] + (UNIT_SIZE / 3 ) * 2 ,eyeSize ,eyeSize );
+                         break;
+                 }
+             }//the rest the body
+             else {
                  g.setColor(bodyColorOfSnake);
                  g.fillRect(xBodyPart[i]  ,yBodyPart[i] ,UNIT_SIZE ,UNIT_SIZE );
              }

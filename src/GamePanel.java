@@ -63,8 +63,9 @@ public class GamePanel extends JPanel implements ActionListener {
         this.setPreferredSize(new Dimension(PANEL_WIDTH,PANEL_HEIGHT));
         this.setFocusable(true);
         this.setBackground(panelColor);
-        this.setVisible(true);
+        this.setLayout(null);
 
+        this.setVisible(true);
         this.addKeyListener(new MoveSnake());//we add the move and keyListeners in panel not frame
         System.out.println("GamePanel : done!!!");
 
@@ -98,12 +99,12 @@ public class GamePanel extends JPanel implements ActionListener {
             running = false;
             return false;
         }
-        if (xBodyPart[0] > FIELD_WIDTH){// OK !!!
+        if (xBodyPart[0] > FIELD_WIDTH - 1){// OK !!! -1 is because se add 1 pixel og having grid
             System.out.println("collision in 3th condition in isColl.. ");
             running = false;
             return false;
         }
-        if(yBodyPart[0] > FIELD_HEIGHT + HEADER_HEIGHT){// OK !!!
+        if(yBodyPart[0] > FIELD_HEIGHT + HEADER_HEIGHT - 1 ){// OK !!! -1 is because se add 1 pixel og having grid
             System.out.println("collision in 4th condition in isColl.. ");
             running = false;
             return false;

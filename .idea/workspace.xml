@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b49dd498-1f13-49b9-82ab-d87af5bafa87" name="Changes" comment="startBut get actionperformed">
+    <list default="true" id="b49dd498-1f13-49b9-82ab-d87af5bafa87" name="Changes" comment="before fixing but title">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GamePanel.java" afterDir="false" />
     </list>
@@ -221,7 +221,13 @@
       <option name="presentableId" value="LOCAL‎۰۰۰۲۵" />
       <updated>1703682790701</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL‎۰۰۰۲۶" summary="before fixing but title">
+      <created>1703683786140</created>
+      <option name="number" value="LOCAL‎۰۰۰۲۶" />
+      <option name="presentableId" value="LOCAL‎۰۰۰۲۶" />
+      <updated>1703683786140</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -268,7 +274,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="first getting experience" />
     <MESSAGE value="GameFrame created" />
     <MESSAGE value="grid created" />
     <MESSAGE value="&quot;SNAKE&quot; name created" />
@@ -293,6 +298,7 @@
     <MESSAGE value="startBut created" />
     <MESSAGE value="startBut get action performed" />
     <MESSAGE value="startBut get actionperformed" />
-    <option name="LAST_COMMIT_MESSAGE" value="startBut get actionperformed" />
+    <MESSAGE value="before fixing but title" />
+    <option name="LAST_COMMIT_MESSAGE" value="before fixing but title" />
   </component>
 </project>

@@ -102,6 +102,8 @@ public class GamePanel extends JPanel implements ActionListener {
     }
 
     public boolean isCollisionHappened(){
+
+        //collision checking
         if (xBodyPart[0] < 0 ){// OK !!!
             System.out.println("collision in 1th condition in isColl.. ");
             running = false;
@@ -135,12 +137,12 @@ public class GamePanel extends JPanel implements ActionListener {
 
     public void startButCreation(){
         startButton = new JButton();
-        startButton.setText("START!");
+        startButton.setText("STOP");
         startButton.setSize(new Dimension(strtWeidth,strtHeight));
         startButton.setLocation(strtX ,strtY);
 
         startButton.setFont(strtFont);
-        startButton.setForeground(startforeColor);
+        startButton.setForeground(gameOverColor);
 
 
         startButton.setBorder(BorderFactory.createBevelBorder(5));
@@ -369,6 +371,11 @@ public class GamePanel extends JPanel implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if(running){
+            //checking real and correct status of startbut in its appearance it has appropriate function
+            startButton.setText("STOP");
+            startButton.setForeground(gameOverColor);
+
+
             /** do not change this ordinationb because it would amke graphic bug in top left of frame*/
             eatApple();
             move();
@@ -377,32 +384,35 @@ public class GamePanel extends JPanel implements ActionListener {
 
             repaint();
             /*********************************/
+        }else{
+            //checking real and correct status of startbut in its appearance it has appropriate function
+            startButton.setText("START!");
+            startButton.setForeground(startforeColor);
         }
 
         if (e.getSource() == startButton){
             if (running == false){
                 startGameByButton();
-            } else if (running == true) {
+            } else if ( running == true) {
                 StopGameByButton();
             }
         }
     }
 
     public void startGameByButton(){
-        running = true;
         startButton.setText("STOP");
         startButton.setForeground(gameOverColor);
 
+        running = true;
         startGame();
+
         System.out.println("START!!! CLICKED");
     }
     public void StopGameByButton(){
-        running = false;
         startButton.setText("START!");
         startButton.setForeground(startforeColor);
 
-
-
+        running = false;
 
         System.out.println("STOP CLICKED");
     }

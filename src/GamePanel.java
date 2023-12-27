@@ -48,7 +48,17 @@ public class GamePanel extends JPanel implements ActionListener {
     int XApple ;
     int YApple ;
     Color appleColor = new Color(0xD90429);
+    // ********************** START BUTTON ********************
+    JButton startButton;
+    int strtWeidth = UNIT_SIZE  * 2;
+    int strtHeight = UNIT_SIZE ;
 
+    int strtX = PANEL_WIDTH - strtWeidth  - (UNIT_SIZE / 2);//this formula make y coordinate exactly in proper place
+    int strtY = (HEADER_HEIGHT / 2) - (strtHeight / 2) ;//this formula make y coordinate exactly in middle
+    //of HEADER
+
+    Font strtFont = new Font("Berlin Sans FB Demi", Font.BOLD, 32);
+    Color stetforeColor = new Color(0xD4DC64);
     // ********************** DEFAULT INFO ********************
     int GAME_UNIT =  (FIELD_WIDTH * FIELD_HEIGHT) / UNIT_SIZE;
     Font headerFontOfSnakeName = new Font("Berlin Sans FB Demi", Font.PLAIN, 60);
@@ -63,15 +73,14 @@ public class GamePanel extends JPanel implements ActionListener {
         this.setPreferredSize(new Dimension(PANEL_WIDTH,PANEL_HEIGHT));
         this.setFocusable(true);
         this.setBackground(panelColor);
-        this.setLayout(null);
+
+        this.setLayout(null);/**  it is truly essential to add components like start button*/
 
         this.setVisible(true);
         this.addKeyListener(new MoveSnake());//we add the move and keyListeners in panel not frame
         System.out.println("GamePanel : done!!!");
 
-
-
-
+        startButCreation();
         startGame();
     }
     public void startGame(){
@@ -118,6 +127,24 @@ public class GamePanel extends JPanel implements ActionListener {
             }
         }
         return true;
+    }
+
+    public void startButCreation(){
+        startButton = new JButton();
+        startButton.setText("START!");
+        startButton.setSize(new Dimension(strtWeidth,strtHeight));
+        startButton.setLocation(strtX ,strtY);
+
+        startButton.setFont(strtFont);
+        startButton.setForeground(stetforeColor);
+
+
+        startButton.setBorder(BorderFactory.createBevelBorder(5));
+        startButton.setFocusable(false);
+        startButton.setBackground(panelColor);
+
+        this.add(startButton);
+        System.out.println("start button created");
     }
 
     public void move(){

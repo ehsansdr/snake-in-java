@@ -84,6 +84,7 @@ public class GamePanel extends JPanel implements ActionListener {
         startGame();
     }
     public void startGame(){
+        appleEaten = 0;
         bodyParts = 3;
         for (int i = 0 ; i <= bodyParts ; i++){
             xBodyPart[i] = UNIT_SIZE * (5 - i);
@@ -142,6 +143,8 @@ public class GamePanel extends JPanel implements ActionListener {
         startButton.setBorder(BorderFactory.createBevelBorder(5));
         startButton.setFocusable(false);
         startButton.setBackground(panelColor);
+
+        startButton.addActionListener(this);
 
         this.add(startButton);
         System.out.println("start button created");
@@ -372,5 +375,15 @@ public class GamePanel extends JPanel implements ActionListener {
             repaint();
             /*********************************/
         }
+
+        if (e.getSource() == startButton){
+            if (startButton.getText().equalsIgnoreCase("START!")){
+                System.out.println("START!!! CLICKED");
+            } else if (startButton.getText().equalsIgnoreCase("STOP")) {
+                System.out.println("STOP CLICKED");
+            }
+        }
     }
+
+
 }

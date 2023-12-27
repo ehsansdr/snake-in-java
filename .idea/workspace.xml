@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b49dd498-1f13-49b9-82ab-d87af5bafa87" name="Changes" comment="before fixing but title">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GamePanel.java" afterDir="false" />
-    </list>
+    <list default="true" id="b49dd498-1f13-49b9-82ab-d87af5bafa87" name="Changes" comment="button fixed" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -227,7 +224,13 @@
       <option name="presentableId" value="LOCAL‎۰۰۰۲۶" />
       <updated>1703683786140</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL‎۰۰۰۲۷" summary="button fixed">
+      <created>1703684915911</created>
+      <option name="number" value="LOCAL‎۰۰۰۲۷" />
+      <option name="presentableId" value="LOCAL‎۰۰۰۲۷" />
+      <updated>1703684915911</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -274,7 +277,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="GameFrame created" />
     <MESSAGE value="grid created" />
     <MESSAGE value="&quot;SNAKE&quot; name created" />
     <MESSAGE value="&quot;Apples :&quot; created" />
@@ -299,6 +301,7 @@
     <MESSAGE value="startBut get action performed" />
     <MESSAGE value="startBut get actionperformed" />
     <MESSAGE value="before fixing but title" />
-    <option name="LAST_COMMIT_MESSAGE" value="before fixing but title" />
+    <MESSAGE value="button fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="button fixed" />
   </component>
 </project>

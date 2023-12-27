@@ -58,7 +58,7 @@ public class GamePanel extends JPanel implements ActionListener {
     //of HEADER
 
     Font strtFont = new Font("Berlin Sans FB Demi", Font.BOLD, 32);
-    Color stetforeColor = new Color(0xD4DC64);
+    Color startforeColor = new Color(0xD4DC64);
     // ********************** DEFAULT INFO ********************
     int GAME_UNIT =  (FIELD_WIDTH * FIELD_HEIGHT) / UNIT_SIZE;
     Font headerFontOfSnakeName = new Font("Berlin Sans FB Demi", Font.PLAIN, 60);
@@ -70,6 +70,10 @@ public class GamePanel extends JPanel implements ActionListener {
 
     GamePanel(){
         random = new Random();
+
+        timer =new Timer(delay,this);
+        timer.start();
+
         this.setPreferredSize(new Dimension(PANEL_WIDTH,PANEL_HEIGHT));
         this.setFocusable(true);
         this.setBackground(panelColor);
@@ -84,6 +88,7 @@ public class GamePanel extends JPanel implements ActionListener {
         startGame();
     }
     public void startGame(){
+        direction = 'R';
         appleEaten = 0;
         bodyParts = 3;
         for (int i = 0 ; i <= bodyParts ; i++){
@@ -91,8 +96,6 @@ public class GamePanel extends JPanel implements ActionListener {
             yBodyPart[i] = UNIT_SIZE * 2 + HEADER_HEIGHT;
         }
 
-        timer =new Timer(delay,this);
-        timer.start();
 
         newApple();
         System.out.println("startGame method!!!");
@@ -137,7 +140,7 @@ public class GamePanel extends JPanel implements ActionListener {
         startButton.setLocation(strtX ,strtY);
 
         startButton.setFont(strtFont);
-        startButton.setForeground(stetforeColor);
+        startButton.setForeground(startforeColor);
 
 
         startButton.setBorder(BorderFactory.createBevelBorder(5));
@@ -365,7 +368,7 @@ public class GamePanel extends JPanel implements ActionListener {
      * */
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(isCollisionHappened()){
+        if(running){
             /** do not change this ordinationb because it would amke graphic bug in top left of frame*/
             eatApple();
             move();
@@ -377,13 +380,31 @@ public class GamePanel extends JPanel implements ActionListener {
         }
 
         if (e.getSource() == startButton){
-            if (startButton.getText().equalsIgnoreCase("START!")){
-                System.out.println("START!!! CLICKED");
-            } else if (startButton.getText().equalsIgnoreCase("STOP")) {
-                System.out.println("STOP CLICKED");
+            if (running == false){
+                startGameByButton();
+            } else if (running == true) {
+                StopGameByButton();
             }
         }
     }
 
+    public void startGameByButton(){
+        running = true;
+        startButton.setText("STOP");
+        startButton.setForeground(gameOverColor);
+
+        startGame();
+        System.out.println("START!!! CLICKED");
+    }
+    public void StopGameByButton(){
+        running = false;
+        startButton.setText("START!");
+        startButton.setForeground(startforeColor);
+
+
+
+
+        System.out.println("STOP CLICKED");
+    }
 
 }

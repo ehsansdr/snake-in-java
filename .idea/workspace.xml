@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b49dd498-1f13-49b9-82ab-d87af5bafa87" name="Changes" comment="button fixed" />
+    <list default="true" id="b49dd498-1f13-49b9-82ab-d87af5bafa87" name="Changes" comment="first detail">
+      <change afterPath="$PROJECT_DIR$/img.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -230,7 +234,13 @@
       <option name="presentableId" value="LOCAL‎۰۰۰۲۷" />
       <updated>1703684915911</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL‎۰۰۰۲۸" summary="first detail">
+      <created>1703686145228</created>
+      <option name="number" value="LOCAL‎۰۰۰۲۸" />
+      <option name="presentableId" value="LOCAL‎۰۰۰۲۸" />
+      <updated>1703686145228</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -277,7 +287,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="grid created" />
     <MESSAGE value="&quot;SNAKE&quot; name created" />
     <MESSAGE value="&quot;Apples :&quot; created" />
     <MESSAGE value="apple coordinate done" />
@@ -302,6 +311,7 @@
     <MESSAGE value="startBut get actionperformed" />
     <MESSAGE value="before fixing but title" />
     <MESSAGE value="button fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="button fixed" />
+    <MESSAGE value="first detail" />
+    <option name="LAST_COMMIT_MESSAGE" value="first detail" />
   </component>
 </project>

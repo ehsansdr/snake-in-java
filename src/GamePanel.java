@@ -29,7 +29,7 @@ public class GamePanel extends JPanel implements ActionListener {
     //it is not actually the extra panel that we want to add just want to
     //have separation between header and game map
     final int FIELD_WIDTH = PANEL_WIDTH - 1;//-1 is because of difference of  line of grid
-    final int FIELD_HEIGHT = PANEL_HEIGHT - HEADER_HEIGHT;
+    final int FIELD_HEIGHT = PANEL_HEIGHT - HEADER_HEIGHT - 1;
 
     //********************** SNAKE BODY **********************
     public int bodyParts = 3;
@@ -52,6 +52,9 @@ public class GamePanel extends JPanel implements ActionListener {
     // ********************** DEFAULT INFO ********************
     int GAME_UNIT =  (FIELD_WIDTH * FIELD_HEIGHT) / UNIT_SIZE;
     Font headerFontOfSnakeName = new Font("Berlin Sans FB Demi", Font.PLAIN, 60);
+
+    Color gameOverColor = new Color(0xBD1E1E);
+    Font gameOverFont = new Font("Berlin Sans FB Demi", Font.PLAIN, 80);
 
 
 
@@ -164,10 +167,11 @@ public class GamePanel extends JPanel implements ActionListener {
             g.drawString("SNAKE", PANEL_WIDTH / 2 - 75, 60);//change x of it base on size created by formula
         }
 
-        drawObject(g);
+        drawAppleObject(g);
         drawSnake(g);
+        drawGameOver(g);
     }
-     public void drawSnake(Graphics g){
+    public void drawSnake(Graphics g){
          //snake creating
          for (int i = 0 ;i <= bodyParts ; i++){
              //if we are drawing head
@@ -250,7 +254,7 @@ public class GamePanel extends JPanel implements ActionListener {
              }
          }
      }
-     public void drawObject(Graphics g){
+     public void drawAppleObject(Graphics g){
         //apple eaten info:
          g.setFont(new Font(headerFontOfSnakeName.getName(), Font.PLAIN, 30));//we use getName() because of independence
          g.setColor(new Color(0xFFFFFF));
@@ -263,6 +267,25 @@ public class GamePanel extends JPanel implements ActionListener {
 
 
      }
+    public void drawGameOver(Graphics g){
+        //this method has special calculation to set and program and magnitude base on
+        //basic panel height and width
+
+        //game over background:
+        g.setFont(gameOverFont);
+        g.setColor(new Color(0x000000));
+        g.fillRect(UNIT_SIZE  + UNIT_SIZE / 3,//stater point
+                HEADER_HEIGHT + ( 1 * UNIT_SIZE),//stater point
+                FIELD_WIDTH  -  (UNIT_SIZE  + UNIT_SIZE / 3) * 2,//*2 is because left gap and right gap
+                gameOverFont.getSize());//font size is about height of the text not wiedth
+
+        //game over info:
+        g.setFont(gameOverFont);
+        g.setColor(gameOverColor);
+        g.drawString("GAME OVER", (FIELD_WIDTH / 4 ) -  gameOverFont.getSize() + 5,FIELD_HEIGHT / 3 );
+        /** if you get knowledge about FontMatrix fix this calculation */
+
+    }
      /**
      BE CAREFUL
       if you want to have actionPerformed execute

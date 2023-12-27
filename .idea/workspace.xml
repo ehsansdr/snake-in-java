@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b49dd498-1f13-49b9-82ab-d87af5bafa87" name="Changes" comment="key Listening fixed">
+    <list default="true" id="b49dd498-1f13-49b9-82ab-d87af5bafa87" name="Changes" comment="apple coincidence fixed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GamePanel.java" afterDir="false" />
     </list>
@@ -179,7 +179,19 @@
       <option name="presentableId" value="LOCAL‎۰۰۰۱۸" />
       <updated>1703593779895</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL‎۰۰۰۱۹" summary="apple coincidence fixed">
+      <created>1703597443864</created>
+      <option name="number" value="LOCAL‎۰۰۰۱۹" />
+      <option name="presentableId" value="LOCAL‎۰۰۰۱۹" />
+      <updated>1703597443864</updated>
+    </task>
+    <task id="LOCAL‎۰۰۰۲۰" summary="apple coincidence fixed">
+      <created>1703597609486</created>
+      <option name="number" value="LOCAL‎۰۰۰۲۰" />
+      <option name="presentableId" value="LOCAL‎۰۰۰۲۰" />
+      <updated>1703597609486</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -244,6 +256,7 @@
     <MESSAGE value="thong of snake fixed" />
     <MESSAGE value="apple eating fixed" />
     <MESSAGE value="key Listening fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="key Listening fixed" />
+    <MESSAGE value="apple coincidence fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="apple coincidence fixed" />
   </component>
 </project>

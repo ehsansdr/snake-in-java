@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b49dd498-1f13-49b9-82ab-d87af5bafa87" name="Changes" comment="apple coincidence fixed">
+    <list default="true" id="b49dd498-1f13-49b9-82ab-d87af5bafa87" name="Changes" comment="GameOver massage created">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GamePanel.java" afterDir="false" />
     </list>
@@ -191,7 +191,13 @@
       <option name="presentableId" value="LOCAL‎۰۰۰۲۰" />
       <updated>1703597609486</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL‎۰۰۰۲۱" summary="GameOver massage created">
+      <created>1703676360713</created>
+      <option name="number" value="LOCAL‎۰۰۰۲۱" />
+      <option name="presentableId" value="LOCAL‎۰۰۰۲۱" />
+      <updated>1703676360713</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -257,6 +263,7 @@
     <MESSAGE value="apple eating fixed" />
     <MESSAGE value="key Listening fixed" />
     <MESSAGE value="apple coincidence fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="apple coincidence fixed" />
+    <MESSAGE value="GameOver massage created" />
+    <option name="LAST_COMMIT_MESSAGE" value="GameOver massage created" />
   </component>
 </project>

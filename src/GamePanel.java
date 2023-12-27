@@ -87,6 +87,38 @@ public class GamePanel extends JPanel implements ActionListener {
         System.out.println("startGame method!!!");
     }
 
+    public boolean isCollisionHappened(){
+        if (xBodyPart[0] < 0 ){// OK !!!
+            System.out.println("collision in 1th condition in isColl.. ");
+            running = false;
+            return false;
+        }
+        if (yBodyPart[0] < HEADER_HEIGHT){// OK !!!
+            System.out.println("collision in 2th condition in isColl.. ");
+            running = false;
+            return false;
+        }
+        if (xBodyPart[0] > FIELD_WIDTH){// OK !!!
+            System.out.println("collision in 3th condition in isColl.. ");
+            running = false;
+            return false;
+        }
+        if(yBodyPart[0] > FIELD_HEIGHT + HEADER_HEIGHT){// OK !!!
+            System.out.println("collision in 4th condition in isColl.. ");
+            running = false;
+            return false;
+        }
+        for (int i = 1 ; i <= bodyParts ; i++){//
+            if (xBodyPart[0] == xBodyPart[i] && yBodyPart[0] == yBodyPart[i]){// OK !!!
+                running = false;
+                System.out.println("collision in for condition in isColl.. ");
+                System.out.println("head crash the [" + i + "] of the body");
+                return false;
+            }
+        }
+        return true;
+    }
+
     public void move(){
         for (int i = bodyParts ;i > 0 ; i--){
             xBodyPart[i] = xBodyPart[i - 1];
@@ -169,7 +201,10 @@ public class GamePanel extends JPanel implements ActionListener {
 
         drawAppleObject(g);
         drawSnake(g);
-        drawGameOver(g);
+
+        if(!running){
+            drawGameOver(g);
+        }
     }
     public void drawSnake(Graphics g){
          //snake creating
@@ -299,10 +334,13 @@ public class GamePanel extends JPanel implements ActionListener {
      * */
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(running){
+        if(isCollisionHappened()){
             /** do not change this ordinationb because it would amke graphic bug in top left of frame*/
             eatApple();
             move();
+            //now here we check our condition is every thing ok or not
+            isCollisionHappened();
+
             repaint();
             /*********************************/
         }

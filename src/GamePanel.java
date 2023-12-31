@@ -1,9 +1,13 @@
 import lombok.Data;
 
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 import java.util.Random;
 
 @Data
@@ -48,6 +52,10 @@ public class GamePanel extends JPanel implements ActionListener {
     int XApple ;
     int YApple ;
     Color appleColor = new Color(0xD90429);
+
+    File appleEatenSoundFile = new File("Music/appleIsEaten.wav");
+    AudioInputStream appleEatenSoundAIS;
+    Clip appleEatenSound;
     // ********************** START BUTTON ********************
     JButton startButton;
     int strtWeidth = UNIT_SIZE  * 2;
@@ -87,6 +95,10 @@ public class GamePanel extends JPanel implements ActionListener {
         startButCreation();
         startGame();
     }
+
+    private void audioCreationForGame() {
+    }
+
     public void startGame(){
         direction = 'R';
         appleEaten = 0;
@@ -207,8 +219,15 @@ public class GamePanel extends JPanel implements ActionListener {
         System.out.println("newApple execute applesEaten : " + appleEaten);
 
     }
-    public void eatApple(){
+    public void eatApple() throws Exception{
         if(xBodyPart[0] == XApple && yBodyPart[0] == YApple){
+
+            //playing sound whenever apple is eaten
+            this.appleEatenSoundAIS = AudioSystem.getAudioInputStream(this.appleEatenSoundFile.toURI().toURL());
+            this.appleEatenSound = AudioSystem.getClip();
+            this.appleEatenSound.open(appleEatenSoundAIS);
+            this.appleEatenSound.start();
+
             appleEaten++;
             bodyParts++;
             newApple();
@@ -377,7 +396,11 @@ public class GamePanel extends JPanel implements ActionListener {
 
 
             /** do not change this ordinationb because it would amke graphic bug in top left of frame*/
-            eatApple();
+            try{
+                eatApple();
+            }catch (Exception E){
+                System.out.println("file didn't found");
+            }
             move();
             //now here we check our condition is every thing ok or not
             isCollisionHappened();
@@ -416,5 +439,4 @@ public class GamePanel extends JPanel implements ActionListener {
 
         System.out.println("STOP CLICKED");
     }
-
 }

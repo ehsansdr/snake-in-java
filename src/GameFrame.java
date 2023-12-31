@@ -1,7 +1,8 @@
 import javax.swing.*;
 
 public class GameFrame extends JFrame {
-    GameFrame(){
+    GameFrame() throws Exception{
+
         this.setResizable(true);
         this.setLocation(1200,150);
         this.setTitle("snake");

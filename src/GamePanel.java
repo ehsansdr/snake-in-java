@@ -66,7 +66,10 @@ public class GamePanel extends JPanel implements ActionListener {
     //of HEADER
 
     Font strtFont = new Font("Berlin Sans FB Demi", Font.BOLD, 32);
-    Color startforeColor = new Color(0xD4DC64);
+    Color startForeColor = new Color(0xD4DC64);
+    File buttonSoundFile = new File("Music/click buttons.wav");
+    AudioInputStream buttonSoundAIS;
+    Clip buttonSound;
     // ********************** DEFAULT INFO ********************
     int GAME_UNIT =  (FIELD_WIDTH * FIELD_HEIGHT) / UNIT_SIZE;
     Font headerFontOfSnakeName = new Font("Berlin Sans FB Demi", Font.PLAIN, 60);
@@ -410,19 +413,31 @@ public class GamePanel extends JPanel implements ActionListener {
         }else{
             //checking real and correct status of startbut in its appearance it has appropriate function
             startButton.setText("START!");
-            startButton.setForeground(startforeColor);
+            startButton.setForeground(startForeColor);
         }
-
         if (e.getSource() == startButton){
             if (running == false){
-                startGameByButton();
+                try{
+                    startGameByButton();
+                }catch (Exception E){
+                    System.out.println("file didn't found");
+                }
             } else if ( running == true) {
-                StopGameByButton();
+                try{
+                    StopGameByButton();
+                }catch (Exception E){
+                    System.out.println("file didn't found");
+                }
             }
         }
     }
 
-    public void startGameByButton(){
+    public void startGameByButton() throws Exception{
+        //playing sound in start\stop button
+        this.buttonSoundAIS = AudioSystem.getAudioInputStream(this.buttonSoundFile.toURI().toURL());
+        this.buttonSound = AudioSystem.getClip();
+        this.buttonSound.open(buttonSoundAIS);
+        this.buttonSound.start();
         startButton.setText("STOP");
         startButton.setForeground(gameOverColor);
 
@@ -431,9 +446,15 @@ public class GamePanel extends JPanel implements ActionListener {
 
         System.out.println("START!!! CLICKED");
     }
-    public void StopGameByButton(){
+    public void StopGameByButton() throws Exception{
+        //playing sound in start\stop button
+        this.buttonSoundAIS = AudioSystem.getAudioInputStream(this.buttonSoundFile.toURI().toURL());
+        this.buttonSound = AudioSystem.getClip();
+        this.buttonSound.open(buttonSoundAIS);
+        this.buttonSound.start();
+
         startButton.setText("START!");
-        startButton.setForeground(startforeColor);
+        startButton.setForeground(startForeColor);
 
         running = false;
 

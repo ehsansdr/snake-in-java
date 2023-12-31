@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b49dd498-1f13-49b9-82ab-d87af5bafa87" name="Changes" comment="initial detail">
-      <change afterPath="$PROJECT_DIR$/Music/appleIsEaten.wav" afterDir="false" />
+    <list default="true" id="b49dd498-1f13-49b9-82ab-d87af5bafa87" name="Changes" comment="eating sound set">
+      <change afterPath="$PROJECT_DIR$/Music/click buttons.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Music/game over sound.wav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +42,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "full.screen.before.presentation.mode": "false",
-    "last_opened_file_path": "C:/Users/Public/src/src/com/company/SnakeJava",
+    "last_opened_file_path": "C:/Users/Public/src/src/com/company/SnakeJava/Music",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
@@ -53,6 +52,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Public\src\src\com\company\SnakeJava\Music" />
       <recent name="C:\Users\Public\src\src\com\company\SnakeJava" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -262,7 +262,13 @@
       <option name="presentableId" value="LOCAL‎۰۰۰۳۰" />
       <updated>1703686897467</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL‎۰۰۰۳۱" summary="eating sound set">
+      <created>1704032830831</created>
+      <option name="number" value="LOCAL‎۰۰۰۳۱" />
+      <option name="presentableId" value="LOCAL‎۰۰۰۳۱" />
+      <updated>1704032830831</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -309,7 +315,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="&quot;Apples :&quot; created" />
     <MESSAGE value="apple coordinate done" />
     <MESSAGE value="apple coordinates done" />
     <MESSAGE value="newApple coordinates done" />
@@ -334,6 +339,7 @@
     <MESSAGE value="button fixed" />
     <MESSAGE value="first detail" />
     <MESSAGE value="initial detail" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial detail" />
+    <MESSAGE value="eating sound set" />
+    <option name="LAST_COMMIT_MESSAGE" value="eating sound set" />
   </component>
 </project>

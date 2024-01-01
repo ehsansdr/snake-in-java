@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b49dd498-1f13-49b9-82ab-d87af5bafa87" name="Changes" comment="start\stop button sound set">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GamePanel.java" afterDir="false" />
-    </list>
+    <list default="true" id="b49dd498-1f13-49b9-82ab-d87af5bafa87" name="Changes" comment="GAMEOVER sound set" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -272,7 +269,13 @@
       <option name="presentableId" value="LOCAL‎۰۰۰۳۲" />
       <updated>1704033995207</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL‎۰۰۰۳۳" summary="GAMEOVER sound set">
+      <created>1704090238564</created>
+      <option name="number" value="LOCAL‎۰۰۰۳۳" />
+      <option name="presentableId" value="LOCAL‎۰۰۰۳۳" />
+      <updated>1704090238564</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -319,7 +322,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="apple coordinates done" />
     <MESSAGE value="newApple coordinates done" />
     <MESSAGE value="action performed connected again" />
     <MESSAGE value="snake field done" />
@@ -344,6 +346,7 @@
     <MESSAGE value="initial detail" />
     <MESSAGE value="eating sound set" />
     <MESSAGE value="start\stop button sound set" />
-    <option name="LAST_COMMIT_MESSAGE" value="start\stop button sound set" />
+    <MESSAGE value="GAMEOVER sound set" />
+    <option name="LAST_COMMIT_MESSAGE" value="GAMEOVER sound set" />
   </component>
 </project>

@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b49dd498-1f13-49b9-82ab-d87af5bafa87" name="Changes" comment="GAMEOVER sound set" />
+    <list default="true" id="b49dd498-1f13-49b9-82ab-d87af5bafa87" name="Changes" comment="info updates">
+      <change afterPath="$PROJECT_DIR$/pics/snakeIcon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img.png" beforeDir="false" afterPath="$PROJECT_DIR$/pics/img.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/pics/img_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/pics/img_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameFrame.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -275,7 +283,19 @@
       <option name="presentableId" value="LOCAL‎۰۰۰۳۳" />
       <updated>1704090238564</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL‎۰۰۰۳۴" summary="info update">
+      <created>1704091872212</created>
+      <option name="number" value="LOCAL‎۰۰۰۳۴" />
+      <option name="presentableId" value="LOCAL‎۰۰۰۳۴" />
+      <updated>1704091872212</updated>
+    </task>
+    <task id="LOCAL‎۰۰۰۳۵" summary="info updates">
+      <created>1704092121633</created>
+      <option name="number" value="LOCAL‎۰۰۰۳۵" />
+      <option name="presentableId" value="LOCAL‎۰۰۰۳۵" />
+      <updated>1704092121633</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -322,8 +342,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="newApple coordinates done" />
-    <MESSAGE value="action performed connected again" />
     <MESSAGE value="snake field done" />
     <MESSAGE value="snake move done" />
     <MESSAGE value="snake move and body fixed" />
@@ -347,6 +365,8 @@
     <MESSAGE value="eating sound set" />
     <MESSAGE value="start\stop button sound set" />
     <MESSAGE value="GAMEOVER sound set" />
-    <option name="LAST_COMMIT_MESSAGE" value="GAMEOVER sound set" />
+    <MESSAGE value="info update" />
+    <MESSAGE value="info updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="info updates" />
   </component>
 </project>

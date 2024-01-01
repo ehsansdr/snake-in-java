@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b49dd498-1f13-49b9-82ab-d87af5bafa87" name="Changes" comment="eating sound set">
-      <change afterPath="$PROJECT_DIR$/Music/click buttons.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Music/game over sound.wav" afterDir="false" />
+    <list default="true" id="b49dd498-1f13-49b9-82ab-d87af5bafa87" name="Changes" comment="start\stop button sound set">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GamePanel.java" afterDir="false" />
     </list>
@@ -37,19 +35,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "full.screen.before.presentation.mode": "false",
-    "last_opened_file_path": "C:/Users/Public/src/src/com/company/SnakeJava/Music",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Public/src/src/com/company/SnakeJava/Music&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Public\src\src\com\company\SnakeJava\Music" />
@@ -268,7 +266,13 @@
       <option name="presentableId" value="LOCAL‎۰۰۰۳۱" />
       <updated>1704032830831</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL‎۰۰۰۳۲" summary="start\stop button sound set">
+      <created>1704033995207</created>
+      <option name="number" value="LOCAL‎۰۰۰۳۲" />
+      <option name="presentableId" value="LOCAL‎۰۰۰۳۲" />
+      <updated>1704033995207</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -315,7 +319,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="apple coordinate done" />
     <MESSAGE value="apple coordinates done" />
     <MESSAGE value="newApple coordinates done" />
     <MESSAGE value="action performed connected again" />
@@ -340,6 +343,7 @@
     <MESSAGE value="first detail" />
     <MESSAGE value="initial detail" />
     <MESSAGE value="eating sound set" />
-    <option name="LAST_COMMIT_MESSAGE" value="eating sound set" />
+    <MESSAGE value="start\stop button sound set" />
+    <option name="LAST_COMMIT_MESSAGE" value="start\stop button sound set" />
   </component>
 </project>

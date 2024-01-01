@@ -77,6 +77,9 @@ public class GamePanel extends JPanel implements ActionListener {
     Color gameOverColor = new Color(0xBD1E1E);
     Font gameOverFont = new Font("Berlin Sans FB Demi", Font.PLAIN, 80);
 
+    File gameOverSoundFile = new File("Music/game over sound.wav");
+    AudioInputStream gameOverSoundAIS;
+    Clip gameOverSound;
 
 
     GamePanel(){
@@ -261,7 +264,12 @@ public class GamePanel extends JPanel implements ActionListener {
         drawSnake(g);
 
         if(!running){
-            drawGameOver(g);
+            try{
+                drawGameOver(g);
+            }
+            catch (Exception e){
+                System.out.println("drawGameOver(g) get exception");
+            }
         }
     }
     public void drawSnake(Graphics g){
@@ -360,7 +368,14 @@ public class GamePanel extends JPanel implements ActionListener {
 
 
      }
-    public void drawGameOver(Graphics g){
+    public void drawGameOver(Graphics g) throws Exception{
+
+        this.gameOverSoundAIS = AudioSystem.getAudioInputStream(this.gameOverSoundFile.toURI().toURL());
+        this.gameOverSound = AudioSystem.getClip();
+        this.gameOverSound.open(gameOverSoundAIS);
+        this.gameOverSound.start();
+
+
         //this method has special calculation to set and program and magnitude base on
         //basic panel height and width
 
